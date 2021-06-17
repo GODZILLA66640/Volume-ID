@@ -1,4 +1,4 @@
-To switch what drive is getting edited go to line 83 and change "volumeid c:" to "volumeid d:"
+To switch what drive gets edited go to line 70 and change "vol :c" to "vol :d" then go to line 90 and change "volumeid c:" to "volumeid d:"
 
 A batch file project that generates a new volume id for windows computers...
 
