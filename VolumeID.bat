@@ -73,6 +73,7 @@ setlocal
 :PROMPT
 SET /P AREYOUSURE=Do you want to change your VolumeID (Y/[N])?
 IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
+cls
 
 :VOLUMETRASH
 if exist C:\Windows\System32\Volumeid.exe goto IDSHIT
