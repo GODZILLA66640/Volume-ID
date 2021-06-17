@@ -68,6 +68,18 @@ set SHART=!_RndAlphaNum!-!ASS!
 set SHART=!SHART!
 
 :VOLUMETRASH
+if exist C:\Windows\System32\Volumeid.exe goto IDSHIT
+if not exist C:\Windows\System32\Volumeid.exe goto YUNOANSWER
+
+:YUNOANSWER
+%SystemRoot%\explorer.exe C:\Windows\System32
+echo Put Volumeid.exe here then continue
+pause
+cls
+if not exist C:\Windows\System32\Volumeid.exe goto YUNOANSWER
+goto IDSHIT
+
+:IDSHIT
 volumeid c: !SHART!
 cls
 
