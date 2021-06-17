@@ -67,6 +67,13 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 set SHART=!_RndAlphaNum!-!ASS!
 set SHART=!SHART!
 
+vol c:
+
+setlocal
+:PROMPT
+SET /P AREYOUSURE=Do you want to change your VolumeID (Y/[N])?
+IF /I "%AREYOUSURE%" NEQ "Y" GOTO END
+
 :VOLUMETRASH
 if exist C:\Windows\System32\Volumeid.exe goto IDSHIT
 if not exist C:\Windows\System32\Volumeid.exe goto YUNOANSWER
